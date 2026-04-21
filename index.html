@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国航天简史 - 景深叙事版</title>
+    <script src="https://unpkg.com/three@0.150.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.30.0/dist/globe.gl.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="scroll-proxy"></div>
+
+    <div id="fixed-ui-layer">
+        <div id="globe-container"></div>
+        <div id="year-display">CHSA</div>
+        
+        <div id="timeline-wrapper">
+            <div id="fixed-pointer"></div>
+            <div id="timeline-track"></div>
+        </div>
+        
+        <div id="cards-container"></div>
+        <div class="scroll-hint" id="scroll-hint">SCROLL DOWN TO EXPLORE</div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
