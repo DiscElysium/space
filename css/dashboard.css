@@ -1,0 +1,276 @@
+/* ============================================================
+ * dashboard.css — 补充 style.css 中缺失的图表内部样式
+ * 仅服务于 #page-radar 与 #page-rockets 两个数据页
+ * ============================================================ */
+
+/* ---------- 通用 SVG 轴/网格 ---------- */
+.axis path,
+.axis line {
+    stroke: rgba(255, 255, 255, 0.15);
+    shape-rendering: crispEdges;
+}
+.axis text {
+    fill: var(--text-muted);
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+}
+
+/* ============================================================
+ * 01 // 发射阵地全息雷达
+ * ============================================================ */
+.radar-layout > #radar-container {
+    flex: 2 1 0;            /* 关键:让左侧雷达占 2/3 宽度 */
+    min-width: 0;
+    position: relative;     /* 关键:让 #radar-viz 的 absolute 基于此定位 */
+    background: rgba(0, 229, 255, 0.02);
+    border: 1px solid rgba(0, 229, 255, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.radar-layout > #telemetry-panel {
+    flex: 1 1 0;            /* 右侧遥测面板占 1/3 */
+    min-width: 0;
+    background: var(--panel-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--accent-gold);
+    border-radius: 4px;
+    padding: 30px;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    overflow: auto;
+}
+
+/* 雷达扫描光圈(锥形渐变 + 旋转)
+ * 用 150vmax 的正圆,远大于父容器对角线,
+ * 旋转时不会再露出矩形边界,父级 overflow:hidden 负责裁剪 */
+.radar-sweep {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 150vmax !important;
+    height: 150vmax !important;
+    border-radius: 50%;
+    pointer-events: none;
+    background: conic-gradient(from 0deg,
+        transparent 0deg,
+        transparent 270deg,
+        rgba(0, 229, 255, 0.18) 350deg,
+        rgba(0, 229, 255, 0.32) 360deg);
+    animation: radarSweep 5s linear infinite;
+    mix-blend-mode: screen;
+    transform-origin: center center;
+    will-change: transform;
+}
+@keyframes radarSweep {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* 同时再加一层柔和的中心径向渐变,模拟雷达"近强远弱"的衰减,
+ * 让圆形扫描感更自然(非必需,纯锦上添花) */
+#radar-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at center,
+        transparent 0%,
+        transparent 55%,
+        rgba(3, 5, 8, 0.4) 100%);
+}
+
+/* 左上角文字 */
+.radar-info { z-index: 5; line-height: 1.7; }
+
+/* SVG 内部元素 */
+.grid-line {
+    stroke: rgba(0, 229, 255, 0.08);
+    stroke-width: 1;
+}
+.coord-text {
+    fill: var(--text-muted);
+    font-family: 'Courier New', monospace;
+    font-size: 9px;
+    letter-spacing: 0.5px;
+}
+.site-node circle {
+    transition: stroke 0.25s ease, fill 0.25s ease;
+    filter: drop-shadow(0 0 4px rgba(0, 229, 255, 0.6));
+}
+.site-node:hover circle {
+    stroke: var(--accent-green);
+    fill: rgba(0, 229, 255, 0.3);
+}
+
+/* ---- 遥测面板内文字 ---- */
+.sys-header h1 {
+    font-family: 'Courier New', monospace;
+    font-size: 30px;
+    margin: 0 0 6px 0;
+    letter-spacing: 2px;
+    color: var(--accent-gold);
+    text-shadow: 0 0 12px rgba(255, 200, 87, 0.4);
+    transition: color 0.3s ease;
+}
+.sys-header p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+.data-block {
+    border-left: 2px solid rgba(0, 229, 255, 0.25);
+    padding-left: 14px;
+}
+.data-label {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+.data-value {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: var(--text-main);
+    font-weight: 600;
+    line-height: 1.2;
+}
+.data-sub {
+    font-size: 11px;
+    margin-top: 4px;
+    letter-spacing: 1px;
+}
+
+/* ============================================================
+ * 04 // 火箭运力谱系
+ * ============================================================ */
+.rocket-layout > #nav-rail {
+    flex: 0 0 170px;        /* 固定 170px 宽 */
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.rocket-nav-item {
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 3px solid transparent;
+    color: var(--text-muted);
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+.rocket-nav-item:hover {
+    background: rgba(0, 229, 255, 0.05);
+    color: var(--text-main);
+}
+.rocket-nav-item.active {
+    background: rgba(0, 229, 255, 0.1);
+    border-left-color: var(--accent-green);
+    color: var(--accent-green);
+    box-shadow: inset 0 0 20px rgba(0, 229, 255, 0.05);
+}
+
+.rocket-layout > #stage {
+    flex: 1 1 0;            /* 关键:占满剩余宽度 */
+    min-width: 0;
+    display: flex;
+    flex-direction: column; /* 关键:让 #rocket-viz 能 flex:1 撑满剩余高度 */
+    background: rgba(0, 229, 255, 0.02);
+    border: 1px solid rgba(0, 229, 255, 0.1);
+    border-radius: 4px;
+    padding: 25px;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 0;
+}
+
+#rocket-header {
+    flex: 0 0 auto;
+    margin-bottom: 10px;
+}
+
+#rocket-viz {
+    flex: 1 1 0;            /* 关键:撑满 stage 剩余高度 */
+    min-height: 0;
+    width: 100%;
+    position: relative;
+}
+
+/* SVG 节点 */
+.node {
+    transition: r 0.2s ease;
+    filter: drop-shadow(0 0 6px currentColor);
+}
+
+/* HUD 数据卡片(默认隐藏,hover 时由 JS 加 .active) */
+#hud {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 280px;
+    background: rgba(5, 8, 14, 0.88);
+    border: 1px solid var(--accent-green);
+    border-radius: 4px;
+    padding: 18px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+#hud.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#hud-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--accent-green);
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+#hud-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 9px;
+    border: 1px solid var(--accent-green);
+    color: var(--accent-green);
+    border-radius: 2px;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 14px;
+}
+.stat-label {
+    font-size: 9px;
+    color: var(--text-muted);
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1.5px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+.stat-value {
+    font-size: 14px;
+    color: var(--text-main);
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}

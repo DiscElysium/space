@@ -148,3 +148,127 @@ body {
     color: var(--text-muted); font-size: 12px; letter-spacing: 2px; z-index: 10;
     transition: opacity 0.5s ease; pointer-events: none;
 }
+/* 右侧粒子图片信息栏 */
+/* 右侧科幻信息栏 */
+#info-panel {
+    position: fixed;
+    right: 5vw;
+    top: 50vh;
+    transform: translateY(-50%) translateX(120%);
+    width: 360px;
+    height: 360px;
+    z-index: 20;
+    pointer-events: none;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
+    opacity: 0;
+}
+
+/* 右侧全息遮罩粒子面板 */
+#info-panel {
+    position: fixed;
+    right: 5vw;
+    top: 50vh;
+    transform: translateY(-50%) translateX(120%);
+    width: 380px;  /* 稍微加宽给粒子飞散留出空间 */
+    height: 380px;
+    z-index: 20;
+    pointer-events: none;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
+    opacity: 0;
+}
+
+#info-panel.active {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+}
+
+#particle-reveal-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* 增加微弱的外发光契合航天主题 */
+    filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.3)); 
+}
+/* ==========================================
+   右下角交互提示面板
+   ========================================== */
+#interaction-hint {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: rgba(5, 8, 14, 0.65); /* 匹配深空背景 */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 229, 255, 0.15); /* 微弱的霓虹蓝边框 */
+    border-right: 3px solid #00E5FF; /* 右侧高亮边框呼应 UI */
+    padding: 16px 20px;
+    z-index: 1000;
+    pointer-events: none; /* 关键：防止挡住底部的地球交互 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 229, 255, 0.05);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hint-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hint-action {
+    background: rgba(0, 229, 255, 0.1);
+    color: #00E5FF;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 45px;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.1) inset;
+}
+
+.hint-text {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+}
+
+/* 过渡页容器 */
+#transition-pages {
+    position: relative;
+    z-index: 50; /* 位于背景地球之上，但会被后续时间轴逻辑盖住或衔接 */
+    background: var(--bg-deep);
+}
+
+.data-page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+    background-image: radial-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+.page-title {
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    color: var(--accent-green);
+    margin-bottom: 40px;
+    letter-spacing: 4px;
+    border-left: 4px solid var(--accent-green);
+    padding-left: 20px;
+}
+
+/* 之前提供的 Radar, Rocket, Chart 的布局样式在此处复用，
+   只需将容器高度改为 flex: 1 即可 */
+.full-chart { flex: 1; width: 100%; }
+.radar-layout, .rocket-layout { flex: 1; display: flex; gap: 30px; overflow: hidden; }
