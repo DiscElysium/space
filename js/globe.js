@@ -11,7 +11,7 @@ export class SpaceVisualizer {
             .pointOfView({ lat: 35, lng: 105, altitude: 2.2 });
 
         this.myGlobe.controls().enableZoom = false;
-
+        document.getElementById(containerId).style.transform = 'translateX(10%)';
         // 新增：用于管理地球轨迹动画帧
         this.earthAnimId = null;
         
