@@ -4,26 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>中国航天简史 - 景深叙事版</title>
-    <script src="https://unpkg.com/three@0.150.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.147.0/build/three.min.js"></script>
     <script src="https://unpkg.com/globe.gl@2.30.0/dist/globe.gl.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="./css/dashboard.css"> 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cover.css">
 </head>
 <body>
+    <div id="transition-pages">
+        <section class="data-page" id="page-radar">
+            <div class="page-title">01 // 发射阵地全息雷达</div>
+            <div class="radar-layout">
+                <div id="radar-container">
+                    <div id="radar-viz" style="position: absolute; width: 100%; height: 100%;"></div>
+                    <div class="radar-sweep" style="width: 100%; height: 100%;"></div>
+                    <div class="radar-info" style="position: absolute; top: 15px; left: 15px; font-family: 'Courier New'; font-size: 10px; color: #4A5A6A;">
+                        SYS.OP. NORMAL<br>LAT: 15°N - 45°N<br>LNG: 95°E - 115°E
+                    </div>
+                </div>
+                <div id="telemetry-panel">
+                    <div class="sys-header">
+                        <h1 id="t-name">SYSTEM AWAIT</h1>
+                        <p>SELECT A LAUNCH SITE</p>
+                    </div>
+                    <div class="data-row" style="display: flex; gap: 20px;">
+                        <div class="data-block" style="flex: 1;">
+                            <div class="data-label">Coords</div>
+                            <div id="t-coords" class="data-value">--°N, --°E</div>
+                        </div>
+                        <div class="data-block" style="flex: 1;">
+                            <div class="data-label">Est. Year</div>
+                            <div id="t-year" class="data-value">----</div>
+                        </div>
+                    </div>
+                    <div class="data-block">
+                        <div class="data-label">Alt / Geography</div>
+                        <div id="t-alt" class="data-value" style="color: #00E5FF;">---- m</div>
+                        <div id="t-geo-desc" class="data-sub" style="color: #4A5A6A;">----</div>
+                    </div>
+                    <div class="data-block">
+                        <div class="data-label">Orbits & Mission</div>
+                        <div id="t-orbits" class="data-value" style="font-size: 16px;">----</div>
+                        <div id="t-feature" class="data-sub" style="color: #4A5A6A;">----</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-page" id="page-stats">
+            <div class="page-title">02 // 历史发射统计</div>
+            <div id="stats-chart-container" class="full-chart"></div>
+        </section>
+
+        <section class="data-page" id="page-taikonauts">
+            <div class="page-title">03 // 航天员在轨记录</div>
+            <div id="taikonauts-chart-container" class="full-chart"></div>
+        </section>
+
+        <section class="data-page" id="page-rockets">
+            <div class="page-title">04 // 火箭运力谱系</div>
+            <div class="rocket-layout">
+                <div id="nav-rail">
+                    <div class="rocket-nav-item active" data-filter="all">OVERVIEW</div>
+                    <div class="rocket-nav-item" data-filter="active">NATIONAL</div>
+                    <div class="rocket-nav-item" data-filter="commercial">COMMERCIAL</div>
+                </div>
+                <div id="stage">
+                    <div id="rocket-header">
+                        <h2 style="margin: 0; font-size: 24px; color: #fff;">CHINESE ROCKETRY</h2>
+                        <div class="sub" style="font-size: 10px; color: #4A5A6A; font-family: 'Courier New';">LEO CAPACITY / TIMELINE 1970-2025</div>
+                    </div>
+                    <div id="rocket-viz"></div>
+                    <div id="hud">
+                        <div id="hud-name">LONG MARCH 5</div>
+                        <div id="hud-tag">HEAVY LIFT</div>
+                        <div class="stat-grid">
+                            <div><div class="stat-label">LEO</div><div id="hud-leo" class="stat-value">25,000kg</div></div>
+                            <div><div class="stat-label">Thrust</div><div id="hud-thrust" class="stat-value">10,620kN</div></div>
+                            <div><div class="stat-label">Year</div><div id="hud-year" class="stat-value">2016</div></div>
+                            <div><div class="stat-label">Fuel</div><div id="hud-fuel" class="stat-value">H2/O2</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <div id="scroll-proxy"></div>
 
     <div id="fixed-ui-layer">
         <div id="globe-container"></div>
         <div id="year-display">CHSA</div>
-        
+
         <div id="timeline-wrapper">
             <div id="fixed-pointer"></div>
             <div id="timeline-track"></div>
         </div>
-        
+
         <div id="cards-container"></div>
         <div class="scroll-hint" id="scroll-hint">SCROLL DOWN TO EXPLORE</div>
     </div>
-
+    
     <script type="module" src="./js/main.js"></script>
 </body>
 </html>
