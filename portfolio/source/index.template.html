@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1329">
+  <title>SPACE — Orbital Workshop | Game Design Portfolio</title>
+  <meta name="description" content="A game design portfolio exploring how construction, automation and understanding can change the way a player moves, attacks and controls a ship.">
+  <meta property="og:title" content="SPACE — Orbital Workshop">
+  <meta property="og:description" content="A factory you build. A system you pilot. Five chapters on game design, experimentation and reflection.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://space-orbital-workshop-portfolio.ngakeo1990hl.chatgpt.site/assets/social-preview.jpg">
+  <meta property="og:url" content="https://space-orbital-workshop-portfolio.ngakeo1990hl.chatgpt.site">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#portfolio">Skip to portfolio</a>
+  <header class="site-header">
+    <a class="brand" href="#chapter-1" aria-label="SPACE — Orbital Workshop, beginning"><img src="assets/space-wordmark.svg" width="106" height="32" alt="SPACE"><span>Orbital Workshop</span></a>
+    <nav class="chapter-nav" aria-label="Portfolio chapters">
+      <a href="#chapter-1" aria-current="location"><span>01</span>Overview</a>
+      <a href="#chapter-2"><span>02</span>Origins</a>
+      <a href="#chapter-3"><span>03</span>Play</a>
+      <a href="#chapter-4"><span>04</span>Reflection</a>
+      <a href="#chapter-5"><span>05</span>Iteration</a>
+    </nav>
+    <div class="header-actions">
+      <button id="reading-toggle" type="button" aria-pressed="false">Read text</button>
+      <a class="pdf-link" href="downloads/SPACE-Orbital-Workshop.pdf" target="_blank" rel="noopener" aria-label="Open five-page portfolio PDF">PDF <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="reading-progress" aria-hidden="true"><span id="progress"></span></div>
+  </header>
+  <main id="portfolio">
+    <h1 class="sr-only">SPACE — Orbital Workshop. A game design portfolio.</h1>
+    <div class="portfolio-tools"><p>GAME DESIGN PORTFOLIO <span class="tool-separator">/</span> FIVE CHAPTERS</p><div class="languages" role="group" aria-label="Reading transcript language"><button type="button" data-language="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-language="zh" aria-pressed="false" lang="zh-CN">中文稿</button></div></div>
+    <!-- CHAPTERS -->
+  </main>
+  <footer class="site-footer">
+    <div><span class="footer-orbit" aria-hidden="true">●</span><p>BUILD · UNDERSTAND · MOVE FURTHER</p></div>
+    <nav aria-label="Additional resources"><a href="downloads/SPACE-Orbital-Workshop.pdf" target="_blank" rel="noopener">Portfolio PDF ↗</a><a href="downloads/SPACE-Chinese-Companion.txt" download lang="zh-CN">中文说明稿 ↓</a><a href="https://github.com/DiscElysium/space/tree/main/portfolio" target="_blank" rel="noopener">Source ↗</a><a href="#chapter-1">Back to orbit ↑</a></nav>
+    <small>Cover artwork is an AI re-render based on a game capture. Gameplay captures, references and design reflections are identified within the pages.</small>
+  </footer>
+  <dialog id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-toolbar"><h2 id="viewer-title">01 / Overview</h2><div class="viewer-actions"><button id="zoom-toggle" type="button" aria-pressed="false">100%</button><button id="fullscreen" type="button">Full screen</button><button id="viewer-close" type="button" aria-label="Close enlarged page">Close <span aria-hidden="true">×</span></button></div></div>
+    <div id="viewer-stage" class="viewer-stage" tabindex="0" aria-label="Enlarged page; scroll to inspect at 100 percent"><img id="viewer-image" alt="" width="2520" height="1080"></div>
+    <div class="viewer-bottom"><button id="viewer-prev" type="button" aria-label="Previous chapter">← Previous</button><p id="viewer-caption">A factory you build. A system you pilot.</p><button id="viewer-next" type="button" aria-label="Next chapter">Next →</button></div>
+  </dialog>
+  <p id="status" class="sr-only" aria-live="polite"></p>
+</body>
+</html>

@@ -1,0 +1,517 @@
+[
+  {
+    "page": 1,
+    "title_en": "Orbital Workshop",
+    "title_zh": "轨道工坊",
+    "purpose_zh": "当前游戏概述与核心问题。",
+    "blocks": [
+      {
+        "id": "strap",
+        "en": "A FACTORY YOU BUILD. A SYSTEM YOU PILOT.",
+        "zh": "建造一座工厂，驾驶你构筑的系统。"
+      },
+      {
+        "id": "question",
+        "en": "How can understanding a system\nchange the way a player moves,\nattacks and controls it?",
+        "zh": "理解一套系统，能否改变玩家移动、攻击与操控的方式？"
+      },
+      {
+        "id": "intro",
+        "en": "SPACE is an automation and construction sandbox. Players explore and gather resources, build a ship, then pilot what they assembled. Supply routes and trigger assignments determine how installed devices respond, so understanding the system can change the craft's handling and available actions.",
+        "zh": "SPACE 是一款自动化建造沙盒。玩家探索并收集资源、建造飞船，再驾驶亲手组装的系统。供给路径与触发分配决定已安装设备如何响应，因此，对系统理解的加深可以改变飞船的操控手感与行动方式。"
+      },
+      {
+        "id": "insets",
+        "en": "ORIGINAL CAPTURE / NINE EMPTY DECKS",
+        "zh": "原始实机 / 九块空甲板开局"
+      },
+      {
+        "id": "h1",
+        "en": "GROWTH THAT TRAVELS WITH YOU",
+        "zh": "让成长伴随探索"
+      },
+      {
+        "id": "b1",
+        "en": "Each extension remains part of the craft the player explores with. Acquired resources become working structures, supply routes and new capabilities.",
+        "zh": "每次扩建都保留在玩家用于探索的载体上。获得的资源逐渐转化为能够运行的结构、供给路径与新能力。"
+      },
+      {
+        "id": "h2",
+        "en": "UNDERSTANDING CHANGES CONTROL",
+        "zh": "让理解影响操控"
+      },
+      {
+        "id": "b2",
+        "en": "Engine placement, supply and trigger groups change the response to an input. Progress can alter how the craft acts as well as what it produces.",
+        "zh": "推进器布局、供给与触发分组共同改变输入的响应。成长因此不仅改变产量，也改变载体如何行动。"
+      },
+      {
+        "id": "h3",
+        "en": "A SYSTEM BUILT THROUGH USE",
+        "zh": "在使用中形成系统"
+      },
+      {
+        "id": "b3",
+        "en": "Pause to edit, try the configuration, then expand around a need discovered in flight. The framework is playable; its learning curve still needs player observation.",
+        "zh": "暂停编辑、试用构筑，再围绕试航中发现的需求扩展系统。当前框架已经可玩，学习曲线仍需玩家观察。"
+      },
+      {
+        "id": "hero_caption",
+        "en": "AI RE-RENDER FROM GAME CAPTURE",
+        "zh": "主图为实机依据的 AI 二次处理"
+      }
+    ],
+    "label": "Overview",
+    "label_zh": "项目概述",
+    "strap": "A factory you build. A system you pilot.",
+    "alt": "SPACE: an isometric moving factory in deep space, with the design question and three project principles."
+  },
+  {
+    "page": 2,
+    "title_en": "THREE FORMS OF PROGRESSION",
+    "title_zh": "三种成长，如何汇入同一艘飞船",
+    "purpose_zh": "用三种成长作为个人分析框架，说明参考如何转化为自己的设计目标。",
+    "blocks": [
+      {
+        "id": "title",
+        "en": "THREE FORMS\nOF PROGRESSION",
+        "zh": "三种成长，如何汇入同一艘飞船"
+      },
+      {
+        "id": "intro",
+        "en": "I use three lenses for progression: what players acquire, how skilfully they act, and how deeply they understand a system. I wanted understanding to change execution through what the player builds.",
+        "zh": "我用三个视角理解游戏中的成长：玩家获得了什么、行动变得多么熟练，以及对系统理解得多深。我希望玩家能够通过亲手建造，让理解的成长改变操作。"
+      },
+      {
+        "id": "motivation_h",
+        "en": "WHY KEEP GROWTH ON A CARRIER?",
+        "zh": "为什么让成长集中在载体上？"
+      },
+      {
+        "id": "motivation",
+        "en": "Putting production on a ship keeps construction in use. Resources become part of a vehicle that travels with the player, while a problem encountered in flight gives the next extension a purpose.",
+        "zh": "把生产系统放到飞船上，可以让建造的成果持续参与使用。资源转化为始终跟随玩家的载体；试航中遇到的问题，也为下一次扩建提供具体目的。"
+      },
+      {
+        "id": "raft_h",
+        "en": "RAFT / ACQUISITION MADE TANGIBLE",
+        "zh": "Raft / 让获得的成长成为可见载体"
+      },
+      {
+        "id": "raft",
+        "en": "Raft makes accumulated construction travel with the player. I wanted each new structure and supply route to remain useful during exploration, so growth would accompany the player as a changing vehicle.",
+        "zh": "Raft 让不断积累的建造成果随着玩家一起移动。我希望每座新结构与每条供给路径都能在探索中继续发挥作用，让成长表现为一艘持续变化的载体。"
+      },
+      {
+        "id": "noita_h",
+        "en": "NOITA / KNOWLEDGE BECOMES ABILITY",
+        "zh": "Noita / 让知识转化为能力"
+      },
+      {
+        "id": "noita",
+        "en": "Noita connects acquisition, understanding and execution particularly well in my experience. Yet different builds can demand sharply different handling, making mechanical learning less continuous. This led me to seek a steadier control foundation that players could keep reorganising.",
+        "zh": "在我的体验中，Noita 将获得、理解与操作紧密地联系在一起。不过，不同构筑可能要求截然不同的操作，使操作熟练度的积累不总是连续的。因此，我希望建立更稳定、又能够被玩家不断重新组织的控制基础。"
+      },
+      {
+        "id": "network_caption",
+        "en": "EARLIER PROJECT / ORIGINAL COMPONENT ART",
+        "zh": "早期团队项目 / 原始组件美术"
+      },
+      {
+        "id": "synthesis_h",
+        "en": "THE QUESTION CARRIED INTO SPACE",
+        "zh": "被带入 SPACE 的问题"
+      },
+      {
+        "id": "synthesis",
+        "en": "My first game pursued this through a trigger network. SPACE reworks the same ambition as automation carried on the craft the player controls.",
+        "zh": "第一个游戏通过触发网络探索这一问题。SPACE 则将同一愿望重新组织为自动化系统，并把它放在玩家亲自驾驶的载体上。"
+      },
+      {
+        "id": "automation_images",
+        "en": "shapez: routes | Mindustry: supply in action",
+        "zh": "shapez：运输结构；Mindustry：供给参与战斗"
+      },
+      {
+        "id": "automation_h",
+        "en": "AUTOMATION / BEYOND THROUGHPUT",
+        "zh": "自动化 / 将理解继续延伸到行动"
+      },
+      {
+        "id": "automation",
+        "en": "In shapez, planning and throughput dominate my attention. I wanted production knowledge to shape an immediate action response too, as supply already supports combat in Mindustry.",
+        "zh": "游玩 shapez 时，我的注意力主要集中在规划与吞吐效率上。我希望生产知识还能进一步改变直接操控的反馈。Mindustry 中供给参与战斗的关系，也帮助我思考生产与行动的联系。"
+      },
+      {
+        "id": "goal1_h",
+        "en": "01 / ACQUISITION",
+        "zh": "01 / 获得成长"
+      },
+      {
+        "id": "goal1",
+        "en": "Resources, devices and deck space accumulate as a persistent craft. Each addition should support exploration or a new way to act.",
+        "zh": "资源、设备与甲板空间积累为持续存在的飞船。每次增加都应当支持探索，或带来新的行动可能。"
+      },
+      {
+        "id": "goal2_h",
+        "en": "02 / EXECUTION",
+        "zh": "02 / 操作成长"
+      },
+      {
+        "id": "goal2",
+        "en": "Practice develops timing and coordination. A stable control foundation should make learning one configuration useful when the craft expands.",
+        "zh": "练习让时机把握与协同操作更加熟练。稳定的控制基础，应当让已有经验能够在扩建后继续发挥作用。"
+      },
+      {
+        "id": "goal3_h",
+        "en": "03 / UNDERSTANDING",
+        "zh": "03 / 理解成长"
+      },
+      {
+        "id": "goal3",
+        "en": "Learning supply, layout and trigger relationships lets the player reorganise how the craft responds, rather than only increase output.",
+        "zh": "理解供给、布局与触发之间的关系，让玩家能够重新组织飞船的响应方式，而不仅是增加产量。"
+      }
+    ],
+    "label": "Origins",
+    "label_zh": "缘起与目标",
+    "strap": "Three forms of progression, one moving workshop.",
+    "alt": "An orbital composition connecting Raft, Noita and automation games to acquisition, execution and understanding."
+  },
+  {
+    "page": 3,
+    "title_en": "CONSTRUCTION AND CONTROL",
+    "title_zh": "建造如何成为操控的一部分",
+    "purpose_zh": "以探索收集、建造配置、驾驶操作解释核心玩法，突出供给和触发如何改变手感。",
+    "blocks": [
+      {
+        "id": "title",
+        "en": "CONSTRUCTION\nAND CONTROL",
+        "zh": "建造如何成为操控的一部分"
+      },
+      {
+        "id": "intro",
+        "en": "Explore and gather, build the ship, then pilot it. I connect these activities through supply and triggers, so the player builds the conditions for an action as well as deciding when to perform it.",
+        "zh": "探索收集、建造飞船，再驾驶操作。我用供给与触发将这些活动连接起来，让玩家既能决定何时行动，也能亲手构筑行动得以发生的条件。"
+      },
+      {
+        "id": "loop",
+        "en": "EXPLORE + GATHER > BUILD + CONFIGURE > PILOT + OPERATE > RETURN TO BUILD",
+        "zh": "核心循环：探索收集 → 建造与配置飞船 → 驾驶操作 → 带着新需求返回建造。"
+      },
+      {
+        "id": "input_h",
+        "en": "INPUT / TRIGGER / DEVICE",
+        "zh": "输入 / 触发器 / 设备"
+      },
+      {
+        "id": "input",
+        "en": "Keys activate triggers, which start or stop assigned devices. Supply determines whether those devices can work and how much output they can sustain.",
+        "zh": "按键激活触发器，触发器再控制已分配设备的启停。供给决定这些设备是否具备运行条件，以及能够持续输出多少能力。"
+      },
+      {
+        "id": "callout_store",
+        "en": "STORAGE",
+        "zh": "储存柜"
+      },
+      {
+        "id": "callout_route",
+        "en": "CONVEYOR",
+        "zh": "传送带"
+      },
+      {
+        "id": "callout_input",
+        "en": "D INPUT",
+        "zh": "D 按键输入"
+      },
+      {
+        "id": "edit_h",
+        "en": "01 / PLACE + EDIT",
+        "zh": "01 / 放置与编辑"
+      },
+      {
+        "id": "edit",
+        "en": "Pause to build in 2D or 3D. Place and rotate devices, then test again with recovery and undo. Automated supply gradually replaces manual feeding.",
+        "zh": "暂停后可在二维或三维视角中建造，放置与旋转设备，并借助回收与撤销反复试验。自动化供给会逐步取代手工投料。"
+      },
+      {
+        "id": "supply_h",
+        "en": "02 / CONNECT SUPPLY + TRIGGERS",
+        "zh": "02 / 连接供给与触发"
+      },
+      {
+        "id": "supply",
+        "en": "Deliver fuel or ammunition to the matching device. A route supplies the resources needed to operate and sustain output; a trigger decides when it runs. Stored fuel can keep a device working briefly after supply breaks.",
+        "zh": "将燃料或弹药送到对应设备。路径提供运行与持续输出所需的资源，触发器决定何时启用。供给中断后，设备储存的燃料仍可让它短暂继续运行。"
+      },
+      {
+        "id": "ammo_h",
+        "en": "PRODUCTION CHANGES POSSIBLE ACTIONS",
+        "zh": "生产改变能够持续进行的行动"
+      },
+      {
+        "id": "ammo",
+        "en": "Production changes the actions a craft can sustain. Understanding a route can therefore change acceleration, weapon availability or coordination, rather than only raising output.",
+        "zh": "生产改变飞船能够持续进行的行动。理解一条路径，因此可以改变加速、武器可用性或协同方式，而不仅是提高产量。"
+      },
+      {
+        "id": "flight_caption",
+        "en": "ACTUAL 3D CAPTURE / EARLIER PREPARED LAYOUT",
+        "zh": "真实三维截图 / 较早的预置布局"
+      },
+      {
+        "id": "fly_h",
+        "en": "03 / PILOT + EXTEND",
+        "zh": "03 / 试航与扩建"
+      },
+      {
+        "id": "choice1_h",
+        "en": "PHYSICS / ENGINE POSITION MATTERS",
+        "zh": "物理 / 推进器位置参与操控"
+      },
+      {
+        "id": "choice1",
+        "en": "I tailored thrust, torque, inertia and collision rules for the ship. Engine position and direction support acceleration, rotation and movement along different headings.",
+        "zh": "我围绕飞船定制推力、扭矩、惯量与碰撞规则。推进器的位置和朝向参与决定加速、旋转，以及不同朝向的行驶方式。"
+      },
+      {
+        "id": "choice2_h",
+        "en": "STABILITY / EXTEND A WORKING SYSTEM",
+        "zh": "稳定性 / 扩展已经运行的系统"
+      },
+      {
+        "id": "choice2",
+        "en": "Decks determine mass. Anchoring rotation to the core deck keeps existing engine relationships predictable as the craft grows. I wanted small edits to invite expansion, instead of forcing players to rebuild the whole control system.",
+        "zh": "甲板决定质量。以核心甲板为稳定旋转参考，让飞船扩建后原有推进器关系仍然可预期。我希望小修改能够引向扩建，而不是迫使玩家重做整个操控系统。"
+      },
+      {
+        "id": "choice3_h",
+        "en": "LEARNING / A DIFFERENT RESPONSE TO A KEY",
+        "zh": "学习 / 让同一按键产生不同的响应"
+      },
+      {
+        "id": "choice3",
+        "en": "Layout, supply and trigger groups change the response to a key press. Understanding should alter handling and possible manoeuvres. The resulting long-term learning curve still needs player testing.",
+        "zh": "布局、供给与触发分组共同改变按键响应。我希望理解能够改变手感与机动可能，而这种长期学习曲线仍需要玩家测试。"
+      },
+      {
+        "id": "assist",
+        "en": "Weak, fuel-free WASD / Q / E thrust supports a smoother first flight and recovery. Installed engines still depend on the systems the player builds.",
+        "zh": "较弱的无燃料 WASD / Q / E 微推，为首次试航与脱困提供更平滑的过渡。已安装推进器仍然依赖玩家亲手搭建的系统。"
+      }
+    ],
+    "label": "Play",
+    "label_zh": "核心玩法",
+    "strap": "Construction becomes part of control.",
+    "alt": "Gameplay captures and orbital diagrams explain exploration, ship editing, supply, triggers and piloting."
+  },
+  {
+    "page": 4,
+    "title_en": "THE FIRST EXPERIMENT",
+    "title_zh": "第一个作品：一次范围过大的实验",
+    "purpose_zh": "展示第一款团队作品已经完成的流程与工作量，并分析它为什么没有实现预期的学习体验。",
+    "blocks": [
+      {
+        "id": "title",
+        "en": "THE FIRST\nEXPERIMENT",
+        "zh": "第一个作品：一次范围过大的实验"
+      },
+      {
+        "id": "intro",
+        "en": "My first game was a six-person Unity project and my first experience leading a team. I built the design around a branching trigger system intended to connect spell editing, resource collection and construction.",
+        "zh": "我的第一个游戏是六人合作的 Unity 项目，也是我第一次带队。我围绕一套分支触发系统展开设计，希望将法术编辑、资源收集与建造连接起来。"
+      },
+      {
+        "id": "system_h",
+        "en": "01 / A BRANCHING COMPONENT SYSTEM",
+        "zh": "01 / 分支式组件系统"
+      },
+      {
+        "id": "credits",
+        "en": "UNITY / SIX-PERSON TEAM / MY FIRST TEAM-LEAD ROLE",
+        "zh": "Unity / 六人团队 / 我的第一次带队经历"
+      },
+      {
+        "id": "combat_h",
+        "en": "04 / CLOSE-COMBAT BRANCH",
+        "zh": "04 / 近战分支"
+      },
+      {
+        "id": "system",
+        "en": "Clicking a source hexagon sends triggers through connected cells. The same logic works in the backpack and map, while particle kinetic energy links motion to damage. The team connected a playable progression with two boss encounters and demonstrated a reaction-based rocket-engine prototype.",
+        "zh": "点击六边形源格后，触发会沿连接的格子传递。同一逻辑可以用于背包编辑和地图建造；粒子动能则把运动与伤害联系起来。团队贯通了包含两场 Boss 遭遇的可玩流程，并完成了利用反作用推进的火箭发动机原型。"
+      },
+      {
+        "id": "particles",
+        "en": "02 / PARTICLE OUTPUT",
+        "zh": "02 / 粒子射击输出"
+      },
+      {
+        "id": "boss",
+        "en": "03 / TOP-DOWN BOSS ENCOUNTER",
+        "zh": "03 / 俯视 Boss 遭遇"
+      },
+      {
+        "id": "reflection_h",
+        "en": "RETROSPECTIVE DESIGN ANALYSIS",
+        "zh": "回顾性的设计反思"
+      },
+      {
+        "id": "r1_h",
+        "en": "01 / A HIGH COST BEFORE THE FIRST RESULT",
+        "zh": "01 / 第一个有效结果出现前，学习成本过高"
+      },
+      {
+        "id": "r1",
+        "en": "Choosing a complex editor for my first game made the entry cost high. Components could become useful only in a later combination, even though the player had to judge them earlier. I needed useful partial results and earlier opportunities to try a hypothesis.",
+        "zh": "第一次制作游戏就选择复杂编辑系统，使入门成本很高。组件可能直到后续组合中才显现价值，但玩家更早就必须判断是否保留它。我需要提供有用的阶段性结果，以及更及时的假设验证机会。"
+      },
+      {
+        "id": "r2_h",
+        "en": "02 / A CONNECTED LOOP, A DIFFICULT LEARNING PATH",
+        "zh": "02 / 流程贯通，不等于学习路径清晰"
+      },
+      {
+        "id": "r2",
+        "en": "The loop connected combat rewards with construction and offered a safer place to experiment. Completing that flow did not ensure that players understood it. The gap between editing and feedback made a large possibility space difficult to explore deliberately.",
+        "zh": "这套循环将战斗奖励与建造连接起来，也提供了相对安全的实验场景。但流程贯通并不保证玩家理解了它。编辑与反馈之间的距离，使庞大的可能性空间难以被有目的地探索。"
+      },
+      {
+        "id": "r3_h",
+        "en": "03 / PRODUCTION OUTGREW THE CENTRAL EXPERIMENT",
+        "zh": "03 / 制作范围超过了核心实验所能承载的程度"
+      },
+      {
+        "id": "r3",
+        "en": "Two boss battles, characters, environments and extra combat systems expanded the workload. As a first-time lead, I was slow to protect the core experiment. I did not achieve the learning experience I wanted, but gained technical foundations and experience directing a team.",
+        "zh": "两场 Boss、角色、环境与额外战斗系统不断扩大工作量。第一次带队时，我没有及时保护核心实验。项目没有实现我最初期待的学习体验，但为我积累了技术基础，以及组织团队与多种创作工作的经验。"
+      },
+      {
+        "id": "bridge_h",
+        "en": "INTO SPACE / REBUILDING THE DESIGN",
+        "zh": "走向 SPACE / 重新组织设计"
+      },
+      {
+        "id": "bridge",
+        "en": "I kept the ambition to turn understanding into ability. The redesign replaces the dense trigger editor with visible automation on one persistent ship, then tests construction and physics separately before bringing them together.",
+        "zh": "我保留了“让理解转化为能力”的愿望。重做将密集的触发编辑器转化为同一艘飞船上的可见自动化，并先分开检验建造与物理，再将它们重新连接。"
+      }
+    ],
+    "label": "Reflection",
+    "label_zh": "前作与反思",
+    "strap": "The first experiment, and what it taught me.",
+    "alt": "Hexagonal spell editing, particle output and boss combat from Astronaut Aircraft Artemis, with retrospective analysis."
+  },
+  {
+    "page": 5,
+    "title_en": "A MORE FOCUSED SYSTEM",
+    "title_zh": "通过删减与实验，形成更集中的系统",
+    "purpose_zh": "说明重做中的两项实验与几次取舍如何服务于同一体验，而不只是展示画面升级。",
+    "blocks": [
+      {
+        "id": "title",
+        "en": "A MORE\nFOCUSED SYSTEM",
+        "zh": "通过删减与实验，形成更集中的系统"
+      },
+      {
+        "id": "intro",
+        "en": "I separated construction and transport from movement and collision, then used each prototype to make a clearer decision. The later changes in dimension, setting and interface serve the same goal: keep attention on building a system and learning to operate it.",
+        "zh": "我先将建造与运输、运动与碰撞分开，通过各自的原型做出更清楚的取舍。后续维度、场景与界面的变化，都服务于同一目标：让注意力集中在构筑系统及学习如何操作它。"
+      },
+      {
+        "id": "s1_h",
+        "en": "01 / 2D VALIDATION",
+        "zh": "01 / 二维玩法与技术验证"
+      },
+      {
+        "id": "s1",
+        "en": "The 2D prototype tested building, routes and device control. I removed ground construction when it weakened exploration and the need for automation.",
+        "zh": "二维原型用于检验建造、路径与设备控制。当地图建设削弱探索动力与自动化需求时，我删除了这一建设场景。"
+      },
+      {
+        "id": "s2_h",
+        "en": "02 / A DIMENSIONAL WORLD",
+        "zh": "02 / 三维表现与交互"
+      },
+      {
+        "id": "s2",
+        "en": "I tested lighting and rendering in 3D. Spatial feedback became richer, while precise construction became less direct.",
+        "zh": "我在三维中试验光影与渲染。空间反馈与环境交互更加丰富，但精确建造也变得不够直观。"
+      },
+      {
+        "id": "s3_h",
+        "en": "03 / SPACE FANTASY",
+        "zh": "03 / 太空幻想与 NASA 朋克"
+      },
+      {
+        "id": "s3",
+        "en": "The space setting returns to a focus on aerospace and the moving workshop, with a NASA-inspired industrial vocabulary.",
+        "zh": "太空场景重新集中于航天与移动工坊，以 NASA 朋克的工业语言组织整体风格。"
+      },
+      {
+        "id": "s4_h",
+        "en": "04 / SHARED VIEWS + A CLEARER UI",
+        "zh": "04 / 共用视图与更简洁的界面"
+      },
+      {
+        "id": "s4",
+        "en": "Construction offers both 2D and 3D views. Editing, research and flight reuse inventory, configuration and selection interfaces.",
+        "zh": "建造提供二维与三维两种视图；编辑、研发与航行复用背包、配置及选中界面。"
+      },
+      {
+        "id": "scope_h",
+        "en": "SCOPE DECISION / ONE CARRIER",
+        "zh": "范围取舍 / 将成长集中于同一载体"
+      },
+      {
+        "id": "scope",
+        "en": "I removed ground construction when it competed with exploration and reduced the need for automation. Building only on the ship makes new resources a reason to travel and extend the same working carrier.",
+        "zh": "当地面建造与探索争夺重心，并削弱自动化需求时，我选择只允许在船上建造，让新资源成为继续旅行与扩展同一载体的理由。"
+      },
+      {
+        "id": "principle",
+        "en": "Shared state keeps the 2D and 3D views continuous. A simpler interface and guided first flight help players focus on a working supply-and-control system.",
+        "zh": "共用状态让二维与三维视图保持连续。更简洁的界面与首次试航引导，让玩家将注意力放在能够运行的供给和控制系统上。"
+      },
+      {
+        "id": "a_h",
+        "en": "A / CONSTRUCTION EXPERIMENT",
+        "zh": "A / 构建实验"
+      },
+      {
+        "id": "a_caption",
+        "en": "EDITOR DETAIL / DIRECTION + PORTS | DIMENSIONAL TRIAL",
+        "zh": "编辑细节：朝向与接口 / 立体试运行"
+      },
+      {
+        "id": "a",
+        "en": "I isolated occupancy, inventory, transport and production. Clearer direction and port cues, placement, rotation and undo let me check the building process before reconnecting it with direct control.",
+        "zh": "我单独检验占格、背包、运输与生产，通过清楚的朝向和接口线索，以及放置、旋转与撤销，先检查建造流程，再将其与直接操控重新连接。"
+      },
+      {
+        "id": "b_h",
+        "en": "B / MOVEMENT + COLLISION EXPERIMENT",
+        "zh": "B / 运动与碰撞实验"
+      },
+      {
+        "id": "b",
+        "en": "I tested thrust and contact separately. Decks determine mass, the core provides a stable rotation reference, and engine placement changes force and torque. Opposite impact offsets produce opposite turning responses.",
+        "zh": "我单独检验推力与接触：甲板决定质量，核心提供稳定旋转参考，推进器位置改变力与扭矩，相反碰撞偏移产生相反旋转响应。"
+      },
+      {
+        "id": "outcome_h",
+        "en": "EVIDENCE + NEXT",
+        "zh": "已有结果与下一步"
+      },
+      {
+        "id": "outcome",
+        "en": "PLAYABLE FRAMEWORK: construction, supply, triggers, shared-view editing and first-flight guidance. Next: observe how players diagnose a fault and change their control strategy.",
+        "zh": "当前可玩框架已连接建造、供给、触发、共用视图编辑与首次试航引导。下一步是观察玩家如何判断故障，并据此改变控制策略。"
+      }
+    ],
+    "label": "Iteration",
+    "label_zh": "迭代与成果",
+    "strap": "A more focused system, built through experiments.",
+    "alt": "Four elliptical development stages connect the 2D prototype, 3D trials, space setting and shared editing views."
+  }
+]
