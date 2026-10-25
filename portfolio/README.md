@@ -1,5 +1,7 @@
 # SPACE — Orbital Workshop
 
+Live: https://discelysium.github.io/space/portfolio/
+
 A five-chapter game design portfolio. The original 21:9 compositions, navy/ivory/coral palette and SPACE Axis Refined typography are preserved.
 
 ## Run

@@ -34,7 +34,7 @@ for p, (label, strap, zh), alt in zip(pages, meta, alts):
     blocks = []
     for b in p['blocks']:
         if b['id'] in omit: continue
-        tag = 'h4' if b['id'].endswith('_h') or b['id'] in ['strap','h1','h2','h3'] else 'p'
+        tag = 'h3' if b['id'].endswith('_h') or b['id'] in ['strap','h1','h2','h3'] else 'p'
         blocks.append(f'<{tag} data-copy="{b["id"]}">{html.escape(b["en"].replace(chr(10)," "))}</{tag}>')
     groups.append(f'''
     <section class="chapter" id="chapter-{n}" aria-labelledby="chapter-title-{n}" data-chapter="{n}">
