@@ -27,3 +27,7 @@ Chapter navigation, accessible native disclosure sections, English/Chinese trans
 The first page identifies the AI re-render derived from a gameplay capture. Other visual references and game captures retain the attribution context of the original portfolio pages. Game references are design analysis, not claims of affiliation.
 
 The page compositions and project content belong to their respective creators. Font usage follows the bundled SIL Open Font License.
+
+## Playable version
+
+The top entry launches the v0.10.0 game in dist/play/. Game resources load only after opening the playable page. See dist/play/README.md for browser requirements and build details.

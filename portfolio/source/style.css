@@ -35,3 +35,20 @@ body:has(dialog[open]){overflow:hidden}dialog{padding:0;border:1px solid var(--l
 @media(max-width:430px){.brand>span{display:none}.chapter-nav a{font-size:10px;gap:4px}.chapter-nav a span{font-size:8px}.portfolio-tools p{max-width:200px}.tool-separator{margin:0 5px}.viewer-toolbar{gap:8px}.viewer-actions{gap:10px}.viewer-actions button{font-size:10px}#viewer-close{padding-left:10px}#fullscreen{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 @media print{body{background:white}.site-header,.portfolio-tools,.chapter-meta,.reader,.site-footer,.enlarge-hint{display:none}.chapter{margin:0;padding:0;break-after:page}.sheet{border:0}.sheet img{width:100%}@page{size:landscape;margin:0}}
+
+/* Playable build: the entry sits above the unchanged five chapter compositions. */
+.play-entry{display:grid;grid-template-columns:1.3fr 1fr;align-items:center;gap:45px;margin:26px 2.5vw 14px;padding:22px 0 26px;border-bottom:1px solid var(--line);scroll-margin-top:calc(var(--header) + 14px)}
+.play-eyebrow{font-size:9px!important;letter-spacing:.13em;color:var(--coral)!important;margin:0 0 10px!important}.play-eyebrow span{margin-right:8px}
+.play-copy h2{font-size:clamp(22px,2.3vw,34px);line-height:1.3;margin:0 0 10px;font-weight:500}
+.play-copy>p{font-size:12px;color:var(--muted);max-width:500px;line-height:1.8;margin:0 0 19px}
+.play-button{display:inline-flex;align-items:center;gap:22px;background:var(--coral);color:var(--navy);padding:12px 18px;font-size:11px;font-weight:700;letter-spacing:.03em;border:1px solid var(--coral);transition:background .18s,color .18s}
+.play-button:hover{background:var(--cream);border-color:var(--cream)}
+.play-meta{display:inline-block;margin-left:16px;font:10px/1.8 Space,"Microsoft YaHei",sans-serif;color:var(--muted)}
+.play-art{position:relative;width:min(100%,460px);height:190px;justify-self:end}
+.play-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%;border-radius:50%;transform:rotate(-8deg);border:1px solid #f3ecd166}
+.play-art::before{content:"";position:absolute;inset:-9px -12px;border:1px solid var(--coral);border-radius:50%;transform:rotate(-8deg);opacity:.65}
+.play-art>span{position:absolute;right:10px;bottom:-19px;font-size:8px;letter-spacing:.17em;color:var(--muted)}
+@media(max-width:1100px){.play-meta{display:block;margin:11px 0 0}.play-art{height:175px}.play-entry{gap:30px}}
+@media(max-width:720px){.play-entry{grid-template-columns:1fr;margin:22px 20px 8px;padding:6px 0 24px;gap:0}.play-art{display:none}.play-copy>p{font-size:12px;max-width:520px}.play-copy h2{font-size:25px}.play-meta{display:inline-block;margin-left:12px;font-size:9px}.play-button{padding:11px 14px;font-size:10px}}
+@media(max-width:450px){.play-meta{display:block;margin:12px 0 0}}
+@media print{.play-entry{display:none}}
