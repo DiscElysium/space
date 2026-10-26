@@ -1,0 +1,36 @@
+{
+  "version": "0.14.0-creative.1",
+  "independent_edition": true,
+  "base_pack_sha256": "e82f5f5d072b54a6b7db1cdbfa78210ebc1ea392be24547797f3534dd2b24b64",
+  "original_v014_unchanged": true,
+  "flow_and_production_checks": 38,
+  "mining_checks": 2,
+  "presets": [
+    {
+      "id": "arc",
+      "decks": 23,
+      "components": 630,
+      "production_300s": {
+        "ammo": 109.0,
+        "steel": 341.0
+      },
+      "research_300s": 94,
+      "construction_reserve": {
+        "steel": 109.0
+      }
+    },
+    {
+      "id": "loom",
+      "decks": 23,
+      "components": 615,
+      "production_300s": {
+        "ammo": 106.0,
+        "steel": 338.0
+      },
+      "research_300s": 92,
+      "construction_reserve": {
+        "steel": 106.0
+      }
+    }
+  ]
+}
