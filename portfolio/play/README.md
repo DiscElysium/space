@@ -1,15 +1,15 @@
-# SPACE browser build · v0.10.0
+# SPACE browser build · v0.14.0
 
 Play: https://discelysium.github.io/space/portfolio/play/
 
-The latest standalone Godot game is exported to WebAssembly / WebGL 2 with the official Godot 4.7.2 single-threaded runtime. Keyboard and mouse are required. The game interface is Chinese.
+The latest standalone game is exported with the official Godot 4.7.2 single-threaded WebAssembly / WebGL 2 runtime. Desktop keyboard and mouse are required; the game interface is Chinese.
 
-The full world, 26 landmarks, 688 original mineral points, empty-ship tutorial, building, supply, triggers, combat and repair rules are preserved. Graphics use the Compatibility renderer; cached model textures are capped at 1024 pixels and saved with their compressed buffers. A bundled, subsetted open-licensed font replaces OS-only Chinese font dependencies.
+Completed tutorial goals advance automatically after a short confirmation. Manual review remains on the chosen goal. Equipment details appear above the tutorial, with methods expanded through the ? button. Compact layouts prioritize mineral filters, key binding and storage slots.
 
-The original Windows project remains in output/stellar-playable-20261025/game. Its source was copied to output/stellar-web-20261025/game before browser-only adapters were added. It is not included in this website folder.
+The full world, 26 landmarks, 688 original mineral points, building, supply, triggers, combat and repair are retained. Browser graphics use Compatibility rendering and cached model textures capped at 1024 pixels. Open-licensed bundled Chinese fonts provide consistent text without OS font dependencies. Licenses are in play/licenses/.
 
-The HTML loader restores the exact exported PCK and WASM byte streams from small content-addressed gzip objects. This works on ordinary static hosting without thread-isolation headers or a custom server. All restored bytes are SHA-256 checked during packaging.
+Existing browser storage uses the same directory as v0.10. When no newer save exists, a valid v0.10 save is copied to the current save path; the original remains intact. Existing newer saves and backups are never replaced by this migration. Tutorial upgrades follow the native game's policy, preserving equipment and resources. Progress is local to the browser.
 
-First download: 157.0 MB. A progress indicator is shown. Game progress uses browser-local persistent storage.
+Initial download: 157.1 MB. Content-addressed gzip chunks restore the exact official PCK/WASM bytes; packaging validates every chunk and both full files. Ordinary static hosting requires no thread-isolation headers.
 
-Build helpers are retained in the local output/stellar-web-20261025/tools directory. Licenses are in play/licenses.
+Local source: output/stellar-web-v014-20261026/game. Build helpers and verification records are retained beside it. The original Windows project is unchanged.
