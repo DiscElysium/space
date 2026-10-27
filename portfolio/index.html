@@ -41,8 +41,13 @@
       <div class="play-copy"><p class="play-eyebrow"><span aria-hidden="true">●</span> PLAYABLE BUILD / v0.14.0</p>
         <h2 id="play-title">Step inside the workshop.</h2>
         <p>Start with an empty ship. Build a working supply line, then take your first flight.</p>
-        <a class="play-button" href="play/" target="_blank" rel="noopener" aria-label="Play SPACE in your browser (opens a new tab)">PLAY IN BROWSER <span aria-hidden="true">↗</span></a>
-        <span class="play-meta">Keyboard &amp; mouse · 中文游戏界面 · first load 157 MB</span>
+        <div class="play-actions">
+          <a class="play-button" href="play/" target="_blank" rel="noopener" aria-label="Play SPACE in your browser (opens a new tab)">PLAY IN BROWSER <span aria-hidden="true">↗</span></a>
+          <a class="play-button download-button" href="downloads/windows/" data-windows-download="downloads/windows/windows-6e6fd3f67bef.json" aria-label="Download SPACE v0.14 for Windows, ZIP, no Godot installation required"><span data-download-label>DOWNLOAD WINDOWS</span><span aria-hidden="true">↓</span></a>
+        </div>
+        <span class="play-meta">Keyboard &amp; mouse · 中文游戏界面 · first load 138 MB</span>
+        <span class="download-meta">Windows 10/11 · 64-bit · 166 MB ZIP · unzip &amp; run</span>
+        <span id="download-status" class="download-status" role="status" aria-live="polite"></span>
       </div>
       <div class="play-art"><img src="assets/playable-preview.webp" width="1100" height="688" alt="Actual gameplay: a player-built ship among orbital structures"><span>EXPLORE · BUILD · PILOT</span></div>
     </section>
@@ -129,5 +134,6 @@
     <div class="viewer-bottom"><button id="viewer-prev" type="button" aria-label="Previous chapter">← Previous</button><p id="viewer-caption">A factory you build. A system you pilot.</p><button id="viewer-next" type="button" aria-label="Next chapter">Next →</button></div>
   </dialog>
   <p id="status" class="sr-only" aria-live="polite"></p>
+<script src="download-4d58ae7248ff.js" defer></script>
 </body>
 </html>

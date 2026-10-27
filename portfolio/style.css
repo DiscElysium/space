@@ -52,3 +52,14 @@ body:has(dialog[open]){overflow:hidden}dialog{padding:0;border:1px solid var(--l
 @media(max-width:720px){.play-entry{grid-template-columns:1fr;margin:22px 20px 8px;padding:6px 0 24px;gap:0}.play-art{display:none}.play-copy>p{font-size:12px;max-width:520px}.play-copy h2{font-size:25px}.play-meta{display:inline-block;margin-left:12px;font-size:9px}.play-button{padding:11px 14px;font-size:10px}}
 @media(max-width:450px){.play-meta{display:block;margin:12px 0 0}}
 @media print{.play-entry{display:none}}
+
+/* Paired browser / portable desktop entry, retaining the portfolio palette. */
+.play-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.download-button{background:transparent;color:var(--cream);border-color:#f3ecd16b;gap:16px}
+.download-button:hover{background:var(--cream);color:var(--navy)}
+.download-button[aria-disabled=true]{opacity:.7;cursor:progress}
+.play-copy .play-meta{display:block;margin:12px 0 0}
+.download-meta{display:block;margin-top:3px;font-size:9px;color:var(--muted);line-height:1.8}
+.download-status{display:block;max-width:510px;font-size:10px;line-height:1.7;color:var(--cream)}
+.download-status:not(:empty){margin-top:8px}
+@media(max-width:450px){.play-actions{gap:9px}.play-actions .play-button{font-size:9px;padding:11px 12px;gap:12px}}
