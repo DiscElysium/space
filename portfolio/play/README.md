@@ -1,15 +1,17 @@
-# SPACE browser build · v0.14.0
+# SPACE v0.14 browser hotfix, 2026-10-27
 
-Play: https://discelysium.github.io/space/portfolio/play/
+Restores the pre-optimization v0.14 game. Preserves the full map, gameplay rules,
+browser storage, portfolio layout, Windows entry and independent Creative Edition.
 
-The latest standalone game is exported with the official Godot 4.7.2 single-threaded WebAssembly / WebGL 2 runtime. Desktop keyboard and mouse are required; the game interface is Chinese.
+The preceding PCK binary resources omitted PackedStringArray capabilities. This
+disabled mining, machine ports, control targets and other capability-based systems.
+The package now uses the original 46 text resource definitions, byte-for-byte.
+Existing v10 belts saved without transport state recover as empty belts. Explicit
+malformed transport state is still rejected; existing cargo is preserved.
 
-Completed tutorial goals advance automatically after a short confirmation. Manual review remains on the chosen goal. Equipment details appear above the tutorial, with methods expanded through the ? button. Compact layouts prioritize mineral filters, key binding and storage slots.
+The actual exported pack is tested through a browser-hosted Godot scene with real
+pointer placement and actual simulation/rendering, including beam emission, ore
+delivery, rotation and reconnection. Source-only testing is insufficient here.
 
-The full world, 26 landmarks, 688 original mineral points, building, supply, triggers, combat and repair are retained. Browser graphics use Compatibility rendering and cached model textures capped at 1024 pixels. Open-licensed bundled Chinese fonts provide consistent text without OS font dependencies. Licenses are in play/licenses/.
-
-Existing browser storage uses the same directory as v0.10. When no newer save exists, a valid v0.10 save is copied to the current save path; the original remains intact. Existing newer saves and backups are never replaced by this migration. Tutorial upgrades follow the native game's policy, preserving equipment and resources. Progress is local to the browser.
-
-Initial download: 157.1 MB. Content-addressed gzip chunks restore the exact official PCK/WASM bytes; packaging validates every chunk and both full files. Ordinary static hosting requires no thread-isolation headers.
-
-Local source: output/stellar-web-v014-20261026/game. Build helpers and verification records are retained beside it. The original Windows project is unchanged.
+Reproducible repair and verification: output/stellar-web-rollback-20261027.
+Do not restore the withdrawn optimization manifest without exported-pack testing.
