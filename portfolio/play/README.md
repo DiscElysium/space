@@ -1,17 +1,30 @@
-# SPACE v0.14 browser hotfix, 2026-10-27
+# SPACE v0.14 performance update — 2026-10-27
 
-Restores the pre-optimization v0.14 game. Preserves the full map, gameplay rules,
-browser storage, portfolio layout, Windows entry and independent Creative Edition.
+The world, original visual assets, 120 Hz physics and v0.14 tutorial/controls are retained.
+The exported archetype PackedStringArray bug is fixed using explicit constructors
+and text resource export. Older belts missing transport state recover empty;
+existing real cargo is preserved and malformed explicit states are rejected.
 
-The preceding PCK binary resources omitted PackedStringArray capabilities. This
-disabled mining, machine ports, control targets and other capability-based systems.
-The package now uses the original 46 text resource definitions, byte-for-byte.
-Existing v10 belts saved without transport state recover as empty belts. Explicit
-malformed transport state is still rejected; existing cargo is preserved.
+CPU worksets, exact logistics dependency propagation, exact collision/navigation
+caches, invisible legacy-model removal, shared shader/texture resources and static
+geometry batching reduce unnecessary work. Native Forward+ uses D3D12, following
+measured renderer comparison. Web retains Compatibility and its original texture
+quality. Native exports retain full-resolution native scene textures.
 
-The actual exported pack is tested through a browser-hosted Godot scene with real
-pointer placement and actual simulation/rendering, including beam emission, ore
-delivery, rotation and reconnection. Source-only testing is insufficient here.
+Verified: complete native regression; 10,800 logistics, 6,000 geometry-query and
+810 navigation comparisons; native release-template gameplay; actual browser export
+35 checks including visible laser mining, real ore delivery, rotation/reconnection
+and recovery of the earlier broken-package save; 2D/3D editor visual review.
 
-Reproducible repair and verification: output/stellar-web-rollback-20261027.
-Do not restore the withdrawn optimization manifest without exported-pack testing.
+On the test machine, uncapped foreground native voyage 78.1 -> 153.5 FPS, dense
+belts 25.4 -> 79.0 FPS. The delivered native default cap remains 60 FPS.
+Same-browser 2560x1440 voyage 13.0 -> 24.3 FPS; dense 392 belts 4.2 -> 9.9 FPS.
+These are measured scenarios, not a guarantee of 60 FPS on every browser/device.
+
+The static loader uses bounded read-ahead and immutable hashed parts. The full
+Windows ZIP runs without a separate Godot install. It is hosted as a GitHub Release attachment to keep the Pages site small.
+
+Independent Creative Edition dependencies and existing browser/native saves are
+retained. Reproducible tools, backup, snapshots and reports are saved in
+output/stellar-performance-20261027. A complete pre-change backup was verified
+file by file before optimization.
